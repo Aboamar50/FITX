@@ -18,7 +18,6 @@ export default function Header() {
   const [cartOpen, setCartOpen] = useState(false);
   const mobileMenuRef = useRef(null);
   const [wishListOpen, setWishListOpen] = useState(false);
-
   const wishListData = useSelector((state) => state.wishList);
 
   // Handle shop button click
@@ -43,26 +42,21 @@ export default function Header() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
-            <div className="shrink-0">
-              <Link to="/">
-                <img
-                  src="/icons/official-logo-core-x.svg"
-                  alt="CoreX Logo"
-                  className="h-10 w-auto"
-                />
-              </Link>
-            </div>
+<div className="shrink-0">
+  <Link to="/">
+    <img
+      src="/images/Fitx-header.jpg"
+      alt="Fitx"
+      className="h-12 sm:h-14 w-auto object-contain"
+    />
+  </Link>
+</div>
 
-            {/* Center: Desktop Navigation */}
-            <nav className="hidden md:flex items-center">
-              <div className="relative">
-                <ShopMenu
-                  shopOpen={shopOpen}
-                  setShopOpen={setShopOpen}
-                  onShopClick={handleShopClick}
-                  onShopKeyDown={handleShopButtonKeyDown}
-                />
-              </div>
+
+
+
+
+         
               {/* Garage Sale */}
               <Link
                 to="/garage-sale"
@@ -78,17 +72,17 @@ export default function Header() {
               >
                 ALL PRODUCTS
               </Link>
-              {/* About CoreX */}
+              {/* About Fitx */}
               <Link
-                to="/about-corex"
+                to="/about-Fitx"
                 className="group px-5 py-2 rounded-full font-medium text-gray-700 transition-all duration-300 hover:bg-[#0D1B2A] hover:text-white"
               >
-                ABOUT CORE
+                ABOUT FIT
                 <span className="text-red-600 group-hover:text-red-600 transition-colors duration-300">
                   X
                 </span>
               </Link>
-            </nav>
+            </div>
 
             {/* Right: Icons (desktop) + Mobile Hamburger */}
             <div className="flex items-center ">
@@ -143,8 +137,8 @@ export default function Header() {
               </div>
             </div>
           </div>
-        </div>
-      </header>
+        </header>
+      
 
       <MobileMenu
         mobileOpen={mobileOpen}
